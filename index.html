@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextGen Medical Discoveries</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #fff8dc;
+    color: #fff8dc;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #556b2f; /* darkolivegreen */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .navbar a, .dropbtn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #a0522d;
+    color: #001f4d;
+    border-radius: 5px;
+  }
+  .dropdown { position: relative; display: inline-block; }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a0522d;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: #fff8dc;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+  }
+  .dropdown-content a:hover { background-color: #f0f0f0; }
+  .dropdown:hover .dropdown-content { display: block; }
+
+  /* Title */
+  .title-box {
+    background-color: #fff8dc; /* cornsilk */
+    text-align: center;
+    padding: 20px;
+  }
+  .title-box .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: darkolivegreen;
+    margin: 0;
+  }
+
+  .subtitle { text-align: center; font-size: 20px; color: #a0522d; margin-bottom: 40px; }
+
+  /* Content boxes */
+  .content-box { border-radius: 10px; padding: 20px; margin-bottom: 30px; font-size: 18px; }
+  #daily-fun-fact { background-color: #ffedc1; }
+  .row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
+  .half { flex: 1; min-width: 300px; }
+  .third { flex: 0.45; min-width: 200px; }
+  .video-box { background-color: #fffaf0; border-radius: 10px; padding: 10px; }
+
+  /* Buttons for question */
+  .question-box button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #f7b7cd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .question-box button:hover { background-color: #f58ca6; }
+
+  /* Footer */
+  footer { text-align: center; padding: 20px; background-color: #c3b1e1; color: #ffffff; margin-top: 40px; }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <a href="#">Home</a>
+  <div class="dropdown">
+    <span class="dropbtn">Contact</span>
+    <div class="dropdown-content">
+      <a href="#">Hotline Numbers</a>
+      <a href="#">Email Addresses</a>
+      <a href="#">Support Resources</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <span class="dropbtn">Student Articles</span>
+    <div class="dropdown-content">
+      <a href="#">Published Articles</a>
+      <a href="#">Submit Your Article</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <span class="dropbtn">Medical Careers</span>
+    <div class="dropdown-content">
+      <a href="#">Neurosurgery</a>
+      <a href="#">Cardiology</a>
+      <a href="#">Pediatrics</a>
+      <a href="#">Oncology</a>
+      <a href="#">Psychiatry</a>
+      <a href="#">Dermatology</a>
+      <a href="#">Bariatrics</a>
+      <a href="#">Radiology</a>
+      <a href="#">Anesthesiology</a>
+      <a href="#">Gynecology</a>
+      <a href="#">Dermatology</a>
+      <a href="#">General Surgery</a>
+      <a href="#">Pulmonology</a>
+      <a href="#">Ophthalmology</a>
+      <a href="#">Emergency Medicine</a>
+      <a href="#">Psychiatry</a>
+    </div>
+  </div>
+  <a href="#">Journals</a>
+ 
+</div>
+
+<!-- Title & Subtitle -->
+<div class="title-box">
+  <div class="title">NextGen Medical Discoveries</div>
+</div>
+<div class="subtitle">Welcome to NextGen Medical Discoveries! This is a student run page where we explore the exciting world of medicine, share insights into the latest breakthroughs, and dive into what's new in healthcare. Our goal is to make complex medical topics accessible and interesting, whether you're a student, aspiring medical professional, or just curious about science. Here, you'll find fun facts, summaries of recent research, and resources to guide your journey in the healthcare world.</div>
+
+<!-- Daily Medical Fun Fact -->
+<div class="content-box" id="daily-fun-fact">
+  <h2>Today's Medical Fun Fact (<span id="current-date"></span>):</h2>
+  <p id="funFact">Loading...</p>
+</div>
+
+<!-- How it applies / Small box / Video -->
+<div class="row">
+  <div class="half content-box">
+    <h3>How This Applies / Why It Matters</h3>
+    <p>Explain the real-life importance of today's medical fact.</p>
+  </div>
+  <div class="third content-box">
+    <h3>Quick Note</h3>
+    <p>Additional info or highlight about the fun fact.</p>
+  </div>
+  <div class="third video-box">
+    <h3>Video Highlight</h3>
+    <!-- Example placeholder, replace src with YouTube or video link -->
+    <iframe width="100%" height="150" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Featured Student Article -->
+<div class="content-box" style="background-color:#d7f0f7;">
+  <h3>Featured Student Article</h3>
+  <p>Click here to read <b>Jane Doe's</b> article on <i>Cardiology Advances</i>. Summary: Jane is a high school student exploring new heart disease research techniques. The article highlights findings from recent studies and applications in modern medicine.</p>
+</div>
+
+<!-- Auto-changing Medical Stat & Question -->
+<div class="row">
+  <div class="half content-box" id="medical-stat" style="background-color:#fdf0d5;">
+    <h3>Medical Stat of the Day</h3>
+    <p id="stat">Loading stat...</p>
+  </div>
+  <div class="half content-box question-box" style="background-color:#e0c9f0;">
+    <h3>Question of the Day</h3>
+    <p id="question">Which specialty interests you the most?</p>
+    <button>Submit Response</button>
+    <button>Read Other Responses</button>
+    <button>Poll Option</button>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 NextGen Medical Discoveries
+</footer>
+
+<!-- Scripts -->
+<script>
+  const funFacts = [
+    "The human heart beats about 100,000 times per day.",
+    "Your brain uses about 20% of the body's energy.",
+    "Laughter can improve blood flow and lower stress hormones.",
+    "The liver can regenerate even if up to 75% is removed.",
+    "Humans share about 60% of their DNA with bananas."
+  ];
+  const stats = [
+    "Over 300,000 people are diagnosed with endometriosis annually in the US.",
+    "Heart disease is the leading cause of death worldwide.",
+    "Approximately 1 in 5 adults experiences chronic pain.",
+    "Diabetes affects over 422 million people globally.",
+    "Sleep deprivation is linked to increased risk of obesity."
+  ];
+
+  const now = new Date();
+  const start = new Date(now.getFullYear(),0,0);
+  const diff = now - start;
+  const oneDay = 1000*60*60*24;
+  const dayOfYear = Math.floor(diff / oneDay);
+
+  // Daily Fun Fact
+  const factIndex = dayOfYear % funFacts.length;
+  document.getElementById("funFact").innerText = funFacts[factIndex];
+
+  // Daily Stat
+  const statIndex = dayOfYear % stats.length;
+  document.getElementById("stat").innerText = stats[statIndex];
+
+  // Current Date
+  document.getElementById("current-date").innerText = now.toDateString();
+</script>
+
+</body>
+</html>
